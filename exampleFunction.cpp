@@ -3,8 +3,15 @@
 #include <stdio.h>
 #include <stdint.h> 
 
+
 unsigned int wrapFunctionAdd(unsigned int ui_a, unsigned int ui_b) {
-  unsigned int usum = ui_a + ui_b;
+  unsigned int usum; 
+  if (UINT_MAX - ui_a < ui_b){
+    printf("Los números introducidos producen wrap\n");
+    return 0;
+  } else {
+    usum = ui_a + ui_b;
+  }
   return usum;
 }
 
