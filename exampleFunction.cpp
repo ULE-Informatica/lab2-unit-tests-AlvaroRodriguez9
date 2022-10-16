@@ -17,7 +17,12 @@ unsigned int wrapFunctionAdd(unsigned int ui_a, unsigned int ui_b) {
 
 unsigned int wrapFunctionMul(unsigned int ui_a, unsigned int ui_b) {
   unsigned umul = ui_a;
-  umul *= ui_b;
+  if (ui_a > UINT_MAX / ui_b){
+    printf("Los números introducidos producen wrap\n");
+    return 1;
+  } else {
+    umul *= ui_b;
+  }
   return umul;
 }
 
