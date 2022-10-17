@@ -17,7 +17,7 @@ TEST(wrapMulFunctionTest, NonWrappingMulNums) {
 }
  
 TEST(wrapMulFunctionTest, WrappingMulNums) {
-    ASSERT_EQ(1, wrapFunctionMul(UINT_MAX, UINT_MAX));
+    ASSERT_EQ(0, wrapFunctionMul(UINT_MAX, UINT_MAX));
 }
 
 TEST(wrapShiftFunctionTest, NonWrappingMulBNums) { 
@@ -25,7 +25,7 @@ TEST(wrapShiftFunctionTest, NonWrappingMulBNums) {
 }
  
 TEST(wrapShiftFunctionTest, WrappingMulBNums) {
-    ASSERT_EQ(4294967295, wrapFunctionShift(UINT_MAX, 12));
+    ASSERT_EQ(0, wrapFunctionShift(UINT_MAX, 12));
 }
 
 
