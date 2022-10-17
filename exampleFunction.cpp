@@ -28,7 +28,7 @@ unsigned int wrapFunctionMul(unsigned int ui_a, unsigned int ui_b) {
 
 uint32_t wrapFunctionShift(uint32_t ui_a, unsigned int ui_b) {
   uint32_t uShift;
-  if (ui_b >= __builtin_popcount(UINT_MAX)){
+  if (ui_b >= UINT_MAX){
     printf("Los números introducidos producen wrap\n");
   } else {
     uShift = ui_a << ui_b | ui_a >> (32 - ui_b);
